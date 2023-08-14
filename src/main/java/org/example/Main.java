@@ -40,29 +40,22 @@ public class Main {
 
     public static int calc(int num1, int num2, char operation){
         int result;
-        switch (operation){
-            case '+':
-                result = num1+num2;
-                break;
-            case '-':
-                result = num1-num2;
-                break;
-            case '*':
-                result = num1*num2;
-                break;
-            case '/':
-                if (num1 == 0 || num2 == 0)
-                {
+        switch (operation) {
+            case '+' -> result = num1 + num2;
+            case '-' -> result = num1 - num2;
+            case '*' -> result = num1 * num2;
+            case '/' -> {
+                if (num1 == 0 || num2 == 0) {
                     System.out.println("Не можна ділити на 0! Виберіть іншу операцію.");
                     result = calc(num1, num2, getOperation());
+                } else {
+                    result = num1 / num2;
                 }
-                else {
-                    result = num1/num2;
-                }
-                break;
-            default:
+            }
+            default -> {
                 System.out.println("Операція не розпізнана. Повторіть дані.");
                 result = calc(num1, num2, getOperation());
+            }
         }
         return result;
     }
