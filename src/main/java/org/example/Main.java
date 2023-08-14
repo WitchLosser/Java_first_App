@@ -31,7 +31,7 @@ public class Main {
         if(scanner.hasNext()){
             operation = scanner.next().charAt(0);
         } else {
-            System.out.println("Ви допустили помилку при вводі числа. Спробуйте ще раз.");
+            System.out.println("Ви допустили помилку при вводі операції. Спробуйте ще раз.");
             scanner.next();
             operation = getOperation();
         }
